@@ -12,13 +12,21 @@ class MyComponent extends React.Component{
  /*  
  fragment
  */
-
+ handleOnChangeName = (event) => {
+    this.setState({
+        name: event.target.value
+    })
+ }
     render (){
        
         return (
        <>
             <div className="first">
-                hello my Component , My name is {this.state['name']}
+                hello my Component <br></br>
+                <input value={this.state.name} type="text"
+                    onChange={(event) => this.handleOnChangeName(event)}
+                /> 
+                 My name is {this.state['name']}
             </div>
             <div className="second">
             My channel is : {this.state.channel}
