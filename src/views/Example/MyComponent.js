@@ -8,7 +8,12 @@ class MyComponent extends React.Component{
   */
  state = {
     fisrtName: '',
-    lastName:''
+    lastName:'',
+    arrJobs: [
+        {id:'Job1', title:'Front End', salary:'400 $'},
+        {id:'Job2', title:'Back End', salary:'500 $'},
+        {id:'Job3', title:'Testers', salary:'350 $'}
+    ]
    
  }
  /*  
@@ -54,8 +59,9 @@ class MyComponent extends React.Component{
                 />
             </form>
             <ChilComponent 
-            name={'Hau Nguyen'}
+            name={this.state.fisrtName}
             age={'23'}
+            arrJobs={this.state.arrJobs}
             />
         </>
         )

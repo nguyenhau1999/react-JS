@@ -33,13 +33,20 @@ class ChilComponent extends React.Component{
     render (){
         //re-render
        console.log('>>> Check Props: ', this.props)
-       let {name , age} = this.props
+       let {arrJobs} = this.props;
         return (
        <>                 
-                <div>
-                    ChilComponent: {name} - {age}
-                </div>
-           
+               <div className='job-lists'>
+                    {
+                        arrJobs.map((item, index) => {
+                            return(
+                               <div key={item.id}>
+                                {item.title} - {item.salary}
+                               </div> 
+                            )
+                        })
+                    }
+               </div>
         </>
         )
     }
