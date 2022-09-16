@@ -32,15 +32,14 @@ class ChilComponent extends React.Component{
 
     render (){
         //re-render
-       console.log('>>> Call render: ', this.state)
+       console.log('>>> Check Props: ', this.props)
+       let {name , age} = this.props
         return (
-       <>
-            
-            <form>
+       <>                 
                 <div>
-                    ChilComponent
+                    ChilComponent: {name} - {age}
                 </div>
-            </form>
+           
         </>
         )
     }

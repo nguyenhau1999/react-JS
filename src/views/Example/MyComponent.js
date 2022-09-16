@@ -53,9 +53,10 @@ class MyComponent extends React.Component{
                     onClick={(event) => this.handleSubmit(event)}
                 />
             </form>
-            <ChilComponent/>
-            <ChilComponent/>
-            <ChilComponent/>
+            <ChilComponent 
+            name={'Hau Nguyen'}
+            age={'23'}
+            />
         </>
         )
     }
