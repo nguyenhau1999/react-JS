@@ -1,6 +1,6 @@
 import React from 'react';
 import ChilComponent from './ChildComponent';
-
+import AddCompnent from './AddComponent';
 class MyComponent extends React.Component{
     
 /**
@@ -41,26 +41,9 @@ class MyComponent extends React.Component{
        console.log('>>> Call render: ', this.state)
         return (
        <>
-            
-            <form>
-                <label htmlFor="fname">First name:</label><br/>
-                    <input 
-                    type="text" 
-                    value={this.state.fisrtName}    
-                    onChange={(event) => this.handleChangeFirstName(event)}
-                /><br/>
-                <label htmlFor="lname">Last name:</label><br/>
-                    <input type="text"
-                    value={this.state.lastName}
-                    onChange={(event) => this.handleChangeLastName(event)}    
-                    /><br/><br/>
-                <input type="submit" 
-                    onClick={(event) => this.handleSubmit(event)}
-                />
-            </form>
+            <AddCompnent/>
+           
             <ChilComponent 
-            name={this.state.fisrtName}
-            age={'23'}
             arrJobs={this.state.arrJobs}
             />
         </>
