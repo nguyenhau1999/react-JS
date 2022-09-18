@@ -7,8 +7,6 @@ class MyComponent extends React.Component{
  * key: value
   */
  state = {
-    fisrtName: '',
-    lastName:'',
     arrJobs: [
         {id:'Job1', title:'Front End', salary:'400 $'},
         {id:'Job2', title:'Back End', salary:'500 $'},
@@ -16,6 +14,13 @@ class MyComponent extends React.Component{
     ]
    
  }
+    addNewJob = (job) => {
+        console.log('check job from parent: ', job)
+       this.setState ({
+        arrJobs: [...this.state.arrJobs, job]
+       })
+
+    }
  /*  
  fragment
  cap nhap lai state => setState
@@ -31,17 +36,16 @@ class MyComponent extends React.Component{
         lastName: event.target.value
     })
  }
- handleSubmit = (event) => {
-   event.preventDefault()
-   console.log(">>> Check data input: ", this.state)
- }
+ 
 
     render (){
         //re-render
        console.log('>>> Call render: ', this.state)
         return (
        <>
-            <AddCompnent/>
+            <AddCompnent
+                addNewJob={this.addNewJob}
+            />
            
             <ChilComponent 
             arrJobs={this.state.arrJobs}
