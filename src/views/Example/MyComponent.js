@@ -19,7 +19,7 @@ class MyComponent extends React.Component{
        this.setState ({
         arrJobs: [...this.state.arrJobs, job]
        })
-
+// ... : copy phan tu 
     }
  /*  
  fragment
@@ -36,6 +36,13 @@ class MyComponent extends React.Component{
         lastName: event.target.value
     })
  }
+ deleteAjob = (job) => {
+    let currenJobs =  this.state.arrJobs;
+    currenJobs = currenJobs.filter(item => item.id !== job.id);
+    this.setState ({
+        arrJobs: currenJobs
+    })
+ }
  
 
     render (){
@@ -49,6 +56,7 @@ class MyComponent extends React.Component{
            
             <ChilComponent 
             arrJobs={this.state.arrJobs}
+            deleteAjob={this.deleteAjob}
             />
         </>
         )

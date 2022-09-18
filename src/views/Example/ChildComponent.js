@@ -10,6 +10,10 @@ class ChilComponent extends React.Component{
             showJobs: !this.state.showJobs
         })
     }
+    handleOnclickDelete = (job) => {
+       console.log('>>> Check handleOnclickDelete: ', job)
+        this.props.deleteAjob(job)
+    }
     render (){
         //re-render
        let {arrJobs} = this.props;
@@ -30,6 +34,7 @@ class ChilComponent extends React.Component{
                                         return(
                                         <div key={item.id}>
                                             {item.title} - {item.salary}
+                                             <></> <span onClick={() => this.handleOnclickDelete(item)}>x</span>
                                         </div> 
                                         )
                                     })
