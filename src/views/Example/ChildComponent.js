@@ -1,4 +1,5 @@
 import React from 'react';
+import './Demo.scss'
 
 class ChilComponent extends React.Component{
         state = {
@@ -11,7 +12,7 @@ class ChilComponent extends React.Component{
         })
     }
     handleOnclickDelete = (job) => {
-       console.log('>>> Check handleOnclickDelete: ', job)
+      
         this.props.deleteAjob(job)
     }
     render (){
@@ -34,14 +35,15 @@ class ChilComponent extends React.Component{
                                         return(
                                         <div key={item.id}>
                                             {item.title} - {item.salary}
-                                             <></> <span onClick={() => this.handleOnclickDelete(item)}>x</span>
+                                             <></> <span onClick={() => this.handleOnclickDelete(item)}>x (Delete)</span>
                                         </div> 
                                         )
                                     })
                                 }
                         </div>
                         <div>
-                        <button onClick={() => this.handleShowHide()}>Hide</button>
+                        <button className='btn-show'
+                         onClick={() => this.handleShowHide()}>Hide</button>
                         </div>
                 </>
                 }

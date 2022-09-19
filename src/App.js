@@ -1,7 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
-import MyComponent from './views/Example/MyComponent.js';
-
+import './App.scss';
+// import MyComponent from './views/Example/MyComponent.js';
+import ListTodo from './views/Todos/ListTodo';
 
 function App() {
   return (
@@ -9,10 +9,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello word minh la Hau
+          Simple Todo app with React.JS (Hau)
         </p>
 
-        <MyComponent></MyComponent>
+        {/* <MyComponent></MyComponent> */}
+        <ListTodo></ListTodo>
       </header>
     </div>
   );
