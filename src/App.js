@@ -12,7 +12,6 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Link,
 } from "react-router-dom";
 
 
@@ -23,18 +22,16 @@ function App() {
     <div className="App">
       <header className="App-header">
       <Nav/>
-        <img src={logo} className="App-logo" alt="logo" />
-       
-        
+        <img src={logo} className="App-logo" alt="logo" />     
         <Switch>
           <Route path="/" exact>
             <Home/>
           </Route>
           <Route path="/todo">
-            <ListTodo></ListTodo>
+            <ListTodo/>
           </Route>
           <Route path="/about">
-          <MyComponent></MyComponent>
+          <MyComponent/>
           </Route>
         </Switch>
     
