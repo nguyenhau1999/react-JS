@@ -10,7 +10,7 @@ import ListUser from './views/User/ListUser';
 import Nav from './views/Nav/Nav';
 import Home from './views/Example/Home.js';
 import { BrowserRouter,Routes, Route, Link } from "react-router-dom";
-
+import DetailUser from './views/User/DetailUser';
 
 
 function App() {
@@ -31,6 +31,8 @@ function App() {
           <Route path="/about" element={<MyComponent/>}>
           </Route>
           <Route path="/user" element={<ListUser/>}>
+          </Route>
+          <Route path="/user/:id" element={<DetailUser/>}>
           </Route>
         </Routes>
     
