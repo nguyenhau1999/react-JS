@@ -15,6 +15,7 @@ class Nav extends React.Component {
                  <Link to='/'>Home</Link>
                  <Link to='/todo'>Todos</Link>
                  <Link to='/about'>About</Link>
+                 <Link to='/user'>User</Link>
                 </div>
                 
             )

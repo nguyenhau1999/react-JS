@@ -6,14 +6,11 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+import ListUser from './views/User/ListUser';
 import Nav from './views/Nav/Nav';
 import Home from './views/Example/Home.js';
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter,Routes, Route, Link } from "react-router-dom";
+
 
 
 function App() {
@@ -24,17 +21,18 @@ function App() {
       <header className="App-header">
       <Nav/>
         <img src={logo} className="App-logo" alt="logo" />     
-        <Switch>
-          <Route path="/" exact>
-            <Home/>
+        <Routes>
+          <Route path="/" exact element={<Home/>} >
+            
           </Route>
-          <Route path="/todo">
-            <ListTodo/>
+          <Route path="/todo" element={<ListTodo/>} >
+        
           </Route>
-          <Route path="/about">
-          <MyComponent/>
+          <Route path="/about" element={<MyComponent/>}>
           </Route>
-        </Switch>
+          <Route path="/user" element={<ListUser/>}>
+          </Route>
+        </Routes>
     
       
       </header>

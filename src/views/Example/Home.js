@@ -1,12 +1,12 @@
 import React from "react";
-import { withRouter } from "react-router";
+
 class Home extends React.Component {
 //lifecycle
-    componentDidMount() {
-        setTimeout(() => {
-           this.props.history.push('/todo') 
-        }, 3000);
-    }     
+    // componentDidMount() {
+    //     setTimeout(() => {
+    //        this.props.history.push('/todo') 
+    //     }, 3000);
+    // }     
 
 
 
@@ -19,6 +19,6 @@ class Home extends React.Component {
         )
     }
 }
-export default withRouter(Home); //withRouter : HOC (higher order component) tạo nên 1 component mới và có đầy đủ thông tin của componen được bọc
+export default Home; //withRouter : HOC (higher order component) tạo nên 1 component mới và có đầy đủ thông tin của componen đuoc boc
 
 
