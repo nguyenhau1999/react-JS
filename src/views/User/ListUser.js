@@ -31,7 +31,7 @@ class ListUser extends React.Component {
                     </div>
                     <div className="list-user-content">
                    
-                    { listUsers && listUsers.length > 0 &&
+                    { listUsers && listUsers.length > 0 &&  
                     listUsers.map((item, index) => {
                         return (
                             <div className="child" key={item.id}>
