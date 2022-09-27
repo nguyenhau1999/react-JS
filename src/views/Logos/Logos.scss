@@ -1,0 +1,51 @@
+.App-logos {
+height: 160px;
+width: 160px;
+margin-top: 80px;
+border-radius: 0px;
+margin-left: 875px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.App-vector {
+    position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 13%;
+bottom: 8.33%;
+margin-left: 1650px;
+
+}
+.App-line {
+    position: absolute;
+left: 7.14%;
+right: 21.43%;
+top: 25%;
+margin-top: -85px;
+margin-left: -80px;
+
+
+}
+.App-line-2 {
+    position: absolute;
+left: 7.14%;
+right: 7.14%;
+top: 20%;
+margin-top: -65px;
+margin-left: -80px;
+
+}
+.App-line-3 {
+    position: absolute;
+left: 7.14%;
+right: 7.14%;
+top: 20%;
+margin-top: -50px;
+margin-left: -80px;
+
+}
